@@ -1,0 +1,5 @@
+let x y sum
+set x 20
+set y 80
+set sum x+y
+print sum

@@ -1,0 +1,12 @@
+
+let a b res
+set a 10
+set b -5
+set res -((a + b)*a/(-b))
+set a (84*16)/a-30*b
+set b (res*3-10)
+set a a/1
+set a 483290
+print res
+print a
+print b

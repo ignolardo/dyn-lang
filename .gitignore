@@ -1,0 +1,6 @@
+bin
+obj
+%.o
+compile_flags.txt
+lang
+syntax.ebnf

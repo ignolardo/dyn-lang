@@ -1,0 +1,7 @@
+let a b x y
+set a 20
+set b 40
+set x (a-b)*(a+b)
+set y a*a-b*b
+print x
+print y
