@@ -2,12 +2,9 @@ OUTPUT = lang
 
 BIN = bin
 
-CFLAGS += \
-	-I/usr/include/glib-2.0 \
-	-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+CFLAGS += `pkg-config --cflags glib-2.0`
 
-LDFLAGS += \
-	-lglib-2.0
+LDFLAGS += `pkg-config --libs glib-2.0`
 
 SRC = main.c vm.c compiler.c chunk.c value.c name.c parser.c lexer.c utils.c memory.c
 
@@ -22,6 +19,7 @@ all: $(OBJ)
 
 clean:
 	rm -r $(OBJ)
+	rm $(OUTPUT)
 
 obj/%.c.o: %.c
 	gcc $(CFLAGS) $< -c -g -o $@
